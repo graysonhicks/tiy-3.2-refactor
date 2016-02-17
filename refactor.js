@@ -24,13 +24,13 @@
 // function
 
 function doSomethingCool() {
-  console.log("Something Cool!");
+  console.log("Something Cool!");     //function declaration
 }
 
 // Put your answer below -------------------------
 
 var doSomethingCool = function(){
-  console.log("Something Cool!");
+  console.log("Something Cool!");   // function expression
 };
 
 // -----------------------------------------------
@@ -79,7 +79,7 @@ var letter = "x";
 
 setTimeout(function(){
   letter = "y";
-  console.log("The letter is", letter);
+  console.log("The letter is", letter);  // changes execution stack, JS is single threaded so skips to next
 }, 1);
 
 letter = "z";
@@ -111,8 +111,9 @@ var reverseStr = function(str) {
 
 // Put your answer below -------------------------
 
-
-
+var reverseStr = function(str) {
+  return str.split("").reverse().join("");    //method chaining
+};
 
 // -----------------------------------------------
 
