@@ -203,6 +203,10 @@ var callTenTimes = function(callback) {
 
 // Put your answer below -------------------------
 
+var callNtimes = function(callback, number){
+  var range = _.range(number);  //underscore range makes an array, the argument says how many
+  _.each(range, callback); //underscore each is like a for loop, with how many to run, then what to run
+};
 
 // -----------------------------------------------
 
