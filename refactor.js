@@ -87,6 +87,8 @@ console.log("The letter is", letter);
 
 // Put your answer below -------------------------
 
+// [c] z then y
+//  Normally it would be [b] y then z, but because the set timeout delays it, the interpreter moves on to the next code block which is printed while the delay must now wait on that to print first.
 
 // -----------------------------------------------
 
