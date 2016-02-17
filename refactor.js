@@ -203,7 +203,7 @@ var callTenTimes = function(callback) {
 
 // Put your answer below -------------------------
 
-var callNtimes = function(callback, number){
+var callNtimes = function(callback, number){ //pass in function and number of times to run
   var range = _.range(number);  //underscore range makes an array, the argument says how many
   _.each(range, callback); //underscore each is like a for loop, with how many to run, then what to run
 };
@@ -234,8 +234,19 @@ var decreaseScore = function() {
 };
 
 // Put your answer below -------------------------
+(function(){                              //wrap in IIFE for protection
 
+  var score = 0;
 
+  var increaseScore = function() {
+    score++;
+  };
+
+  var decreaseScore = function() {
+    score--;
+  };
+
+}());
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
