@@ -266,6 +266,13 @@ var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
 
+var addNumbers = function(numberA, numberB) {
+  console.log(numberA + numberB);
+  return (numberA + numberB); // this value must be returned so it is kicked out of the fucntion
+};
+
+var twoPlusTwo = addNumbers(2,2);
+console.log(twoPlusTwo);
 
 // -----------------------------------------------
 
