@@ -88,7 +88,7 @@ console.log("The letter is", letter);
 // Put your answer below -------------------------
 
 // [c] z then y
-//  Normally it would be [b] y then z, but because the set timeout delays it, the interpreter moves on to the next code block which is printed while the delay must now wait on that to print first.
+//  Normally it would be [b] y then z, but because the set timeout delays it, the interpreter moves on to the next code block which is printed while the delay must now wait on that to print first, by the time the delay is over, z has already printed
 
 // -----------------------------------------------
 
@@ -148,6 +148,19 @@ var spanishColor = function(colorName) {
 
 // Put your answer below -------------------------
 
+var spanishColorObject = {
+  rojo: "#ff0000",
+  blanco: "#ffffff",
+  azul: "#0000ff",
+  verde: "#00ff00",
+  negro: "#000000"
+};
+
+function colorFinder(obj, color) {
+  console.log("The hex value for " + color + " is " + obj[color]);
+}
+
+colorFinder(spanishColorObject, "rojo");
 
 // -----------------------------------------------
 
