@@ -357,7 +357,14 @@ var callLater = function(timeout, callback) {
 
 // Put your answer below -------------------------
 
+var callLater = function(timeout, callback) {
+  if(callback) { //if a second value is passed in, then run it below, as is normal in setTimeout
+    setTimeout(callback, timeout);
+  } else {
+    setTimeout(timeout, 1000); //if only one value passed in, assume it is a function with no timeout, so treat it as a function in this setTimeout and give it a default timeout of 1000
+  }
 
+};
 
 // -----------------------------------------------
 
