@@ -291,14 +291,29 @@ console.log(twoPlusTwo);
 // Then refactor the function to have a default
 // amount of 1 if no param is given.
 
-var speed = 0;
-
-var accelerate = function(amount) {
-  speed += amount;
-};
+// var speed = 0;
+//
+// var accelerate = function(amount) {
+//   speed += amount;
+// };
 
 // Put your answer below -------------------------
 
+//it doesnt work if you dont pass parameter because an undefined parameter is not a number, and a number plus something thats not a number is not a number (NaN).  we need to check first and see if it has been defined
+
+var speed = 0;
+
+var accelerate = function(amount) {
+  if(amount) { // this checks to see if it has been passed in with a value
+    speed += amount; //if so, run the way we had it
+    console.log(amount);
+  } else { // otherwise add one to speed, and take amount out of the equation so it doesnt throw it off
+    speed += 1;
+    console.log(speed);
+  }
+};
+
+accelerate();
 
 // -----------------------------------------------
 
@@ -341,6 +356,7 @@ var callLater = function(timeout, callback) {
 };
 
 // Put your answer below -------------------------
+
 
 
 // -----------------------------------------------
